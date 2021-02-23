@@ -9,7 +9,7 @@ In this Codelab, you'll learn how to add AdMob inline ads (Banner, Native) to a 
 
 ## Getting started
 
-Check out the `master` branch of this repository and follow the steps on [Adding AdMob Banner and Native inline ads to a Flutter app codelab](https://codelabs.developers.google.com/codelabs/admob-inline-ads-in-flutter) to get started.
+Check out the `main` branch of this repository and follow the steps on [Adding AdMob Banner and Native inline ads to a Flutter app codelab](https://codelabs.developers.google.com/codelabs/admob-inline-ads-in-flutter) to get started.
 
 ## License
 ```
