@@ -56,7 +56,10 @@ class _BannerInlinePageState extends State<BannerInlinePage> {
             _isAdLoaded = true;
           });
         },
-        onAdFailedToLoad: (_, error) {
+        onAdFailedToLoad: (ad, error) {
+          // Releases an ad resource when it fails to load
+          ad.dispose();
+
           print('Ad load failed (code=${error.code} message=${error.message})');
         },
       ),
