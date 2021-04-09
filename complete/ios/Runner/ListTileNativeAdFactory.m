@@ -25,8 +25,6 @@
   GADUnifiedNativeAdView *nativeAdView =
     [[NSBundle mainBundle] loadNibNamed:@"ListTileNativeAdView" owner:nil options:nil].firstObject;
 
-  nativeAdView.nativeAd = nativeAd;
-
   ((UILabel *)nativeAdView.headlineView).text = nativeAd.headline;
 
   ((UILabel *)nativeAdView.bodyView).text = nativeAd.body;
@@ -36,6 +34,8 @@
   nativeAdView.iconView.hidden = nativeAd.icon ? NO : YES;
 
   nativeAdView.callToActionView.userInteractionEnabled = NO;
+
+  nativeAdView.nativeAd = nativeAd;
 
   return nativeAdView;
 }

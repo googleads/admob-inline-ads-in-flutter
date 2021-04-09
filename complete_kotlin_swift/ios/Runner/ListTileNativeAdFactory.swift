@@ -24,8 +24,6 @@ class ListTileNativeAdFactory : FLTNativeAdFactory {
         let nibView = Bundle.main.loadNibNamed("ListTileNativeAdView", owner: nil, options: nil)!.first
         let nativeAdView = nibView as! GADUnifiedNativeAdView
         
-        nativeAdView.nativeAd = nativeAd
-        
         (nativeAdView.headlineView as! UILabel).text = nativeAd.headline
         
         (nativeAdView.bodyView as! UILabel).text = nativeAd.body
@@ -35,6 +33,8 @@ class ListTileNativeAdFactory : FLTNativeAdFactory {
         nativeAdView.iconView!.isHidden = nativeAd.icon == nil
         
         nativeAdView.callToActionView?.isUserInteractionEnabled = false
+
+        nativeAdView.nativeAd = nativeAd
         
         return nativeAdView
     }

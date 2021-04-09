@@ -35,8 +35,6 @@ class ListTileNativeAdFactory(val context: Context) : GoogleMobileAdsPlugin.Nati
                 .inflate(R.layout.list_tile_native_ad, null) as UnifiedNativeAdView
 
         with(nativeAdView) {
-            setNativeAd(nativeAd)
-
             val attributionViewSmall =
                     findViewById<TextView>(R.id.tv_list_tile_native_ad_attribution_small)
             val attributionViewLarge =
@@ -64,6 +62,8 @@ class ListTileNativeAdFactory(val context: Context) : GoogleMobileAdsPlugin.Nati
                 visibility = if (nativeAd.body.isNotEmpty()) View.VISIBLE else View.INVISIBLE
             }
             this.bodyView = bodyView
+
+            setNativeAd(nativeAd)
         }
 
         return nativeAdView

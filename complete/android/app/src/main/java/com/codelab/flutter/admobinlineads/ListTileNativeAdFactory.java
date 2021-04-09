@@ -44,8 +44,6 @@ class ListTileNativeAdFactory implements GoogleMobileAdsPlugin.NativeAdFactory {
         UnifiedNativeAdView nativeAdView = (UnifiedNativeAdView) LayoutInflater.from(context)
                 .inflate(R.layout.list_tile_native_ad, null);
 
-        nativeAdView.setNativeAd(nativeAd);
-
         TextView attributionViewSmall = nativeAdView
                 .findViewById(R.id.tv_list_tile_native_ad_attribution_small);
         TextView attributionViewLarge = nativeAdView
@@ -71,6 +69,8 @@ class ListTileNativeAdFactory implements GoogleMobileAdsPlugin.NativeAdFactory {
         bodyView.setText(nativeAd.getBody());
         bodyView.setVisibility(nativeAd.getBody() != null ? View.VISIBLE : View.INVISIBLE);
         nativeAdView.setBodyView(bodyView);
+
+        nativeAdView.setNativeAd(nativeAd);
 
         return nativeAdView;
     }
