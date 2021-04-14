@@ -14,33 +14,29 @@
 
 // TODO: Import ad_helper.dart
 
-
 import 'package:admob_inline_ads_in_flutter/destination.dart';
 
 // TODO: Import google_mobile_ads.dart
-
 
 import 'package:flutter/material.dart';
 
 class NativeInlinePage extends StatefulWidget {
   final List<Destination> entries;
 
-  NativeInlinePage({this.entries});
+  NativeInlinePage({
+    required this.entries,
+  });
 
   @override
   State createState() => _NativeInlinePageState();
 }
 
 class _NativeInlinePageState extends State<NativeInlinePage> {
-
   // TODO: Add _kAdIndex
-
 
   // TODO: Add NativeAd instance
 
-
   // TODO: Add _isAdLoaded
-
 
   @override
   void initState() {
@@ -48,9 +44,7 @@ class _NativeInlinePageState extends State<NativeInlinePage> {
 
     // TODO: Create a NativeAd instance
 
-
     // TODO: Load an ad
-
   }
 
   @override
@@ -94,6 +88,6 @@ class _NativeInlinePageState extends State<NativeInlinePage> {
     super.dispose();
   }
 
-  // TODO: Add _getDestinationItemIndex()
+// TODO: Add _getDestinationItemIndex()
 
 }

@@ -40,14 +40,14 @@ class HomePage extends StatelessWidget {
             } else {
               if (snapshot.hasData) {
                 children.addAll([
-                  RaisedButton(
+                  ElevatedButton(
                     child: Text('Banner inline ad'),
                     onPressed: () {
                       Navigator.pushNamed(context, '/banner');
                     },
                   ),
                   SizedBox(height: 8.0),
-                  RaisedButton(
+                  ElevatedButton(
                     child: Text('Native inline ad'),
                     onPressed: () {
                       Navigator.pushNamed(context, '/native');

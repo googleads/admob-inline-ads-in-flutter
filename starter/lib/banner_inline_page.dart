@@ -23,7 +23,9 @@ import 'package:flutter/material.dart';
 class BannerInlinePage extends StatefulWidget {
   final List<Destination> entries;
 
-  BannerInlinePage({this.entries});
+  BannerInlinePage({
+    required this.entries,
+  });
 
   @override
   State createState() => _BannerInlinePageState();
@@ -43,7 +45,6 @@ class _BannerInlinePageState extends State<BannerInlinePage> {
     // TODO: Create a BannerAd instance
 
     // TODO: Load an ad
-
   }
 
   @override
@@ -87,6 +88,6 @@ class _BannerInlinePageState extends State<BannerInlinePage> {
     super.dispose();
   }
 
-  // TODO: Add _getDestinationItemIndex()
+// TODO: Add _getDestinationItemIndex()
 
 }

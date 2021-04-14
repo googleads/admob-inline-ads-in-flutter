@@ -82,5 +82,9 @@ class Destination {
 
   final String asset;
 
-  Destination({this.name, this.duration, this.asset});
+  Destination({
+    required this.name,
+    required this.duration,
+    required this.asset,
+  });
 }

@@ -25,19 +25,20 @@ import 'package:flutter/material.dart';
 class NativeInlinePage extends StatefulWidget {
   final List<Destination> entries;
 
-  NativeInlinePage({this.entries});
+  NativeInlinePage({
+    required this.entries,
+  });
 
   @override
   State createState() => _NativeInlinePageState();
 }
 
 class _NativeInlinePageState extends State<NativeInlinePage> {
-
   // COMPLETE: Add _kAdIndex
   static final _kAdIndex = 4;
 
   // COMPLETE: Add NativeAd instance
-  NativeAd _ad;
+  late NativeAd _ad;
 
   // COMPLETE: Add _isAdLoaded
   bool _isAdLoaded = false;
@@ -114,10 +115,10 @@ class _NativeInlinePageState extends State<NativeInlinePage> {
   @override
   void dispose() {
     // COMPLETE: Dispose a NativeAd object
-    _ad?.dispose();
+    _ad.dispose();
     super.dispose();
   }
-  
+
   // COMPLETE: Add _getDestinationItemIndex()
   int _getDestinationItemIndex(int rawIndex) {
     if (rawIndex >= _kAdIndex && _isAdLoaded) {
