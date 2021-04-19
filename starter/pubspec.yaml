@@ -23,7 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # TODO: Add Add google_mobile_ads as a dependency
+  # TODO: Add google_mobile_ads as a dependency
 
   flutter_gallery_assets: ^1.0.2
 
