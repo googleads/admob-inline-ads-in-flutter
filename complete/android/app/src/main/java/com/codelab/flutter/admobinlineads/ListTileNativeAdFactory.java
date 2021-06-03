@@ -16,9 +16,8 @@
 
 package com.codelab.flutter.admobinlineads;
 
-import com.google.android.gms.ads.formats.NativeAd;
-import com.google.android.gms.ads.formats.UnifiedNativeAd;
-import com.google.android.gms.ads.formats.UnifiedNativeAdView;
+import com.google.android.gms.ads.nativead.NativeAd;
+import com.google.android.gms.ads.nativead.NativeAdView;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -39,9 +38,9 @@ class ListTileNativeAdFactory implements GoogleMobileAdsPlugin.NativeAdFactory {
     }
 
     @Override
-    public UnifiedNativeAdView createNativeAd(
-            UnifiedNativeAd nativeAd, Map<String, Object> customOptions) {
-        UnifiedNativeAdView nativeAdView = (UnifiedNativeAdView) LayoutInflater.from(context)
+    public NativeAdView createNativeAd(
+            NativeAd nativeAd, Map<String, Object> customOptions) {
+        NativeAdView nativeAdView = (NativeAdView) LayoutInflater.from(context)
                 .inflate(R.layout.list_tile_native_ad, null);
 
         TextView attributionViewSmall = nativeAdView

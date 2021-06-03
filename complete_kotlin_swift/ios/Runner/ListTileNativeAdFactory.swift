@@ -19,10 +19,10 @@ import google_mobile_ads
 
 class ListTileNativeAdFactory : FLTNativeAdFactory {
     
-    func createNativeAd(_ nativeAd: GADUnifiedNativeAd,
-                        customOptions: [AnyHashable : Any]? = nil) -> GADUnifiedNativeAdView? {
+    func createNativeAd(_ nativeAd: GADNativeAd,
+                        customOptions: [AnyHashable : Any]? = nil) -> GADNativeAdView? {
         let nibView = Bundle.main.loadNibNamed("ListTileNativeAdView", owner: nil, options: nil)!.first
-        let nativeAdView = nibView as! GADUnifiedNativeAdView
+        let nativeAdView = nibView as! GADNativeAdView
         
         (nativeAdView.headlineView as! UILabel).text = nativeAd.headline
         

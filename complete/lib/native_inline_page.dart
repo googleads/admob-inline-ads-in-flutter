@@ -52,7 +52,7 @@ class _NativeInlinePageState extends State<NativeInlinePage> {
       adUnitId: AdManager.nativeAdUnitId,
       factoryId: 'listTile',
       request: AdRequest(),
-      listener: AdListener(
+      listener: NativeAdListener(
         onAdLoaded: (_) {
           setState(() {
             _isAdLoaded = true;
