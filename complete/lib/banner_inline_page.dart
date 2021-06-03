@@ -52,7 +52,7 @@ class _BannerInlinePageState extends State<BannerInlinePage> {
       adUnitId: AdManager.bannerAdUnitId,
       size: AdSize.banner,
       request: AdRequest(),
-      listener: AdListener(
+      listener: BannerAdListener(
         onAdLoaded: (_) {
           setState(() {
             _isAdLoaded = true;

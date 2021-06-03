@@ -20,9 +20,9 @@
 // COMPLETE: Implement ListTileNativeAdFactory
 @implementation ListTileNativeAdFactory
 
-- (GADUnifiedNativeAdView *)createNativeAd:(GADUnifiedNativeAd *)nativeAd
+- (GADNativeAdView *)createNativeAd:(GADNativeAd *)nativeAd
                              customOptions:(NSDictionary *)customOptions {
-  GADUnifiedNativeAdView *nativeAdView =
+  GADNativeAdView *nativeAdView =
     [[NSBundle mainBundle] loadNibNamed:@"ListTileNativeAdView" owner:nil options:nil].firstObject;
 
   ((UILabel *)nativeAdView.headlineView).text = nativeAd.headline;

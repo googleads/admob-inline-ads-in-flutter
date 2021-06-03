@@ -21,18 +21,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import com.google.android.gms.ads.formats.UnifiedNativeAd
-import com.google.android.gms.ads.formats.UnifiedNativeAdView
+import com.google.android.gms.ads.nativead.NativeAd
+import com.google.android.gms.ads.nativead.NativeAdView
 import io.flutter.plugins.googlemobileads.GoogleMobileAdsPlugin
 
 class ListTileNativeAdFactory(val context: Context) : GoogleMobileAdsPlugin.NativeAdFactory {
 
     override fun createNativeAd(
-            nativeAd: UnifiedNativeAd,
+            nativeAd: NativeAd,
             customOptions: MutableMap<String, Any>?
-    ): UnifiedNativeAdView {
+    ): NativeAdView {
         val nativeAdView = LayoutInflater.from(context)
-                .inflate(R.layout.list_tile_native_ad, null) as UnifiedNativeAdView
+                .inflate(R.layout.list_tile_native_ad, null) as NativeAdView
 
         with(nativeAdView) {
             val attributionViewSmall =
