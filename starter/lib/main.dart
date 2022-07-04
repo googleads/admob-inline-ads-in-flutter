@@ -31,13 +31,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      routes: <String, WidgetBuilder>{
+      routes: {
+        '/': (context) => HomePage(),
         '/banner': (context) =>
             BannerInlinePage(entries: Destination.samples),
         '/native': (context) =>
             NativeInlinePage(entries: Destination.samples),
       },
-      home: HomePage(),
     );
   }
 }
