@@ -19,10 +19,13 @@ import 'package:admob_inline_ads_in_flutter/native_inline_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+
+  const MyApp({Key? key}): super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,7 +35,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routes: {
-        '/': (context) => HomePage(),
+        '/': (context) => const HomePage(),
         '/banner': (context) =>
             BannerInlinePage(entries: Destination.samples),
         '/native': (context) =>

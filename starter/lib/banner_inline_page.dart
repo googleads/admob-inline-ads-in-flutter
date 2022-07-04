@@ -15,7 +15,6 @@
 // TODO: Import ad_helper.dart
 
 import 'package:admob_inline_ads_in_flutter/destination.dart';
-
 // TODO: Import google_mobile_ads.dart
 
 import 'package:flutter/material.dart';
@@ -23,9 +22,10 @@ import 'package:flutter/material.dart';
 class BannerInlinePage extends StatefulWidget {
   final List<Destination> entries;
 
-  BannerInlinePage({
+  const BannerInlinePage({
     required this.entries,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   State createState() => _BannerInlinePageState();
@@ -34,24 +34,20 @@ class BannerInlinePage extends StatefulWidget {
 class _BannerInlinePageState extends State<BannerInlinePage> {
   // TODO: Add _kAdIndex
 
-  // TODO: Add a BannerAd instance
-
-  // TODO: Add _isAdLoaded
+  // TODO: Add a banner ad instance
 
   @override
   void initState() {
     super.initState();
 
-    // TODO: Create a BannerAd instance
-
-    // TODO: Load an ad
+    // TODO: Load a banner ad
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AdMob Banner Inline Ad'),
+        title: const Text('AdMob Banner Inline Ad'),
       ),
       body: ListView.builder(
         // TODO: Adjust itemCount based on the ad load state
@@ -73,7 +69,7 @@ class _BannerInlinePageState extends State<BannerInlinePage> {
             title: Text(item.name),
             subtitle: Text(item.duration),
             onTap: () {
-              print('Clicked ${item.name}');
+              debugPrint('Clicked ${item.name}');
             },
           );
         },
