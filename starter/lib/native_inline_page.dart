@@ -15,7 +15,6 @@
 // TODO: Import ad_helper.dart
 
 import 'package:admob_inline_ads_in_flutter/destination.dart';
-
 // TODO: Import google_mobile_ads.dart
 
 import 'package:flutter/material.dart';
@@ -23,9 +22,10 @@ import 'package:flutter/material.dart';
 class NativeInlinePage extends StatefulWidget {
   final List<Destination> entries;
 
-  NativeInlinePage({
+  const NativeInlinePage({
     required this.entries,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   State createState() => _NativeInlinePageState();
@@ -34,24 +34,20 @@ class NativeInlinePage extends StatefulWidget {
 class _NativeInlinePageState extends State<NativeInlinePage> {
   // TODO: Add _kAdIndex
 
-  // TODO: Add NativeAd instance
-
-  // TODO: Add _isAdLoaded
+  // TODO: Add a native ad instance
 
   @override
   void initState() {
     super.initState();
 
-    // TODO: Create a NativeAd instance
-
-    // TODO: Load an ad
+    // TODO: Load a native ad
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AdMob Native Inline Ad'),
+        title: const Text('AdMob Native Inline Ad'),
       ),
       body: ListView.builder(
         // TODO: Adjust itemCount based on the ad load state
@@ -73,7 +69,7 @@ class _NativeInlinePageState extends State<NativeInlinePage> {
             title: Text(item.name),
             subtitle: Text(item.duration),
             onTap: () {
-              print('Clicked ${item.name}');
+              debugPrint('Clicked ${item.name}');
             },
           );
         },

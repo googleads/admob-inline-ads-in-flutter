@@ -18,11 +18,13 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
 
+  const HomePage({Key? key}): super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('AdMob inline ads'),
+        title: const Text('AdMob inline ads'),
       ),
       body: FutureBuilder<dynamic>(
           future: _initGoogleMobileAds(),
@@ -30,25 +32,25 @@ class HomePage extends StatelessWidget {
             List<Widget> children = [];
 
             if (snapshot.connectionState == ConnectionState.waiting) {
-              children.add(Center(
+              children.add(const Center(
                 child: SizedBox(
-                  child: CircularProgressIndicator(),
                   width: 48.0,
                   height: 48.0,
+                  child: CircularProgressIndicator(),
                 ),
               ));
             } else {
               if (snapshot.hasData) {
                 children.addAll([
                   ElevatedButton(
-                    child: Text('Banner inline ad'),
+                    child: const Text('Banner inline ad'),
                     onPressed: () {
                       Navigator.pushNamed(context, '/banner');
                     },
                   ),
-                  SizedBox(height: 8.0),
+                  const SizedBox(height: 8.0),
                   ElevatedButton(
-                    child: Text('Native inline ad'),
+                    child: const Text('Native inline ad'),
                     onPressed: () {
                       Navigator.pushNamed(context, '/native');
                     },
@@ -59,7 +61,7 @@ class HomePage extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
+                    children: const [
                       Icon(
                         Icons.error_outline,
                         color: Colors.red,
